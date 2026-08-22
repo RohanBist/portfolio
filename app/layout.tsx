@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-// @ts-expect-error Next.js handles CSS imports at build time.
 import "./globals.css";
 import GrainOverlay from "@/components/ui/GrainOverlay";
 import CustomCursor from "@/components/ui/CustomCursor";
-import ScrollToTop from "@/components/ui/ScrollToTop";
 import PageTransition from "@/components/ui/PageTransition";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Rohan Bist — Software Developer",
