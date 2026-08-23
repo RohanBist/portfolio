@@ -19,10 +19,20 @@ export async function generateMetadata({
   const post = getPostBySlug(params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Rohan Bist`,
+    title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `https://rohanbist.com.np/blog/${params.slug}`,
+    },
     openGraph: {
-      images: post.coverImage ? [post.coverImage] : [],
+      title: post.title,
+      description: post.description,
+      url: `https://rohanbist.com.np/blog/${params.slug}`,
+      type: "article",
+      publishedTime: post.date,
+      images: post.coverImage
+        ? [{ url: post.coverImage, width: 1200, height: 630 }]
+        : [],
     },
   };
 }

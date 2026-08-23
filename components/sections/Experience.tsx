@@ -58,7 +58,7 @@ export default function Experience() {
               }}
               className="experience-card"
             >
-              {/* Top row — company + date */}
+              
               <div
                 style={{
                   display: "flex",
@@ -69,7 +69,7 @@ export default function Experience() {
                   gap: 8,
                 }}
               >
-                {/* Left: company + type badge */}
+                
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <h3
                     style={{
@@ -101,7 +101,7 @@ export default function Experience() {
                   </span>
                 </div>
 
-                {/* Right: date */}
+                
                 <span
                   style={{
                     fontFamily: "'Sora', sans-serif",
@@ -116,7 +116,7 @@ export default function Experience() {
                 </span>
               </div>
 
-              {/* Divider */}
+             
               <div
                 style={{
                   width: "100%",
@@ -140,7 +140,7 @@ export default function Experience() {
                 {item.role}
               </p>
 
-              {/* Bullets */}
+              
               <ul
                 style={{
                   listStyle: "none",

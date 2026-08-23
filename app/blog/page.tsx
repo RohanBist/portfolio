@@ -5,8 +5,18 @@ import { getAllPosts } from "@/lib/posts";
 import Footer from "@/components/ui/Footer";
 
 export const metadata = {
-  title: "Blog — Rohan Bist",
-  description: "Thoughts on software, web development, and things I'm learning.",
+  title: "Blog",
+  description:
+    "Thoughts on software development, web, mobile, and things I am learning.",
+  alternates: {
+    canonical: "https://rohanbist.com.np/blog",
+  },
+  openGraph: {
+    title: "Blog — Rohan Bist",
+    description:
+      "Thoughts on software development, web, mobile, and things I am learning.",
+    url: "https://rohanbist.com.np/blog",
+  },
 };
 
 export default function BlogPage() {

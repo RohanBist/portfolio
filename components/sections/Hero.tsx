@@ -59,12 +59,6 @@ export default function Hero() {
         return;
       }
 
-      /*
-       * Both getBoundingClientRect() values use the
-       * same viewport coordinate system.
-       *
-       * Therefore we calculate the difference directly.
-       */
 
       const heroCenterX =
         heroRect.left + heroRect.width / 2;
@@ -104,14 +98,9 @@ export default function Hero() {
     });
   };
 
-  /*
-   * Initial calculation.
-   */
   calculateTarget();
 
-  /*
-   * Recalculate after layout settles.
-   */
+  
   const timer1 = setTimeout(
     calculateTarget,
     100
@@ -127,9 +116,6 @@ export default function Hero() {
     1000
   );
 
-  /*
-   * Recalculate when browser size changes.
-   */
   window.addEventListener(
     "resize",
     calculateTarget
@@ -145,9 +131,7 @@ export default function Hero() {
     calculateTarget
   );
 
-  /*
-   * Watch the actual About box.
-   */
+  
   const aboutEl =
     document.getElementById("about-photo-slot");
 
@@ -195,13 +179,6 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  /*
-   * Desktop:
-   * Hero → About photo transition.
-   *
-   * Small screens:
-   * No cross-page flight.
-   */
  const photoX = useTransform(
   scrollYProgress,
   [0, 0.85],
@@ -322,12 +299,7 @@ const photoRadius = useTransform(
         }}
       />
 
-      {/* 
-        IMPORTANT:
-        This is now a REAL measurable anchor.
-        The aspect ratio gives it a real width,
-        so heroRect.width cannot collapse to 0.
-      */}
+      
       <div
         ref={heroPhotoRef}
         className="hero-photo-anchor"

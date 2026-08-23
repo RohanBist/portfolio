@@ -64,7 +64,7 @@ export default function Navbar() {
           {personal.monogram}
         </a>
 
-        {/* Center nav links — desktop */}
+        
         <nav
           style={{
             display: "flex",
@@ -104,9 +104,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Right: Contact button + hamburger */}
+        
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          {/* Contact button — desktop */}
+          {/* Contact button - desktop */}
           <button
             onClick={() => setContactOpen(true)}
             className="hidden-mobile contact-nav-btn"
@@ -127,7 +127,7 @@ export default function Navbar() {
             Contact
           </button>
 
-          {/* Hamburger — mobile */}
+         
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
