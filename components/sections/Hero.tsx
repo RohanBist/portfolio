@@ -427,7 +427,7 @@ pointerEvents: "auto",
               }}
             >
               <PulsingDot />
-              Available for work
+              Ready for work
             </span>
           )}
         </motion.div>
